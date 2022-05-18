@@ -1,3 +1,24 @@
+# Commitizen CLI Fork without Security Vulnerabilities
+
+A fork of [commitzen/cz-cli][0] with dependency versions specified with an `^`.
+
+Details:
+
+- [commitizen/cz-cli#914][1]
+- [commizizen/cz-cli#897][2]
+
+This package will continue to be updated in npm with the upstream repository.
+
+## Install
+
+```sh
+npm install --save-dev @ryansonshine/commitizen
+```
+
+[0]:https://github.com/commitizen/cz-cli
+[1]:https://github.com/commitizen/cz-cli/issues/914
+[2]:https://github.com/commitizen/cz-cli/issues/897
+
 ## Commitizen for contributors
 
 When you commit with Commitizen, you'll be prompted to fill out any required commit fields at commit time. No more waiting until later for a git commit hook to run and reject your commit (though [that](https://github.com/kentcdodds/validate-commit-msg) can still be helpful). No more digging through [CONTRIBUTING.md](CONTRIBUTING.md) to find what the preferred format is. Get instant feedback on your commit message formatting and be prompted for required fields.
@@ -13,7 +34,7 @@ older versions of Node.js. You should also have npm 6 or greater.
 Installation is as simple as running the following command (if you see `EACCES` error, reading [fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions) may help):
 
 ```sh
-npm install -g commitizen
+npm install -g @ryansonshine/commitizen
 ```
 
 ## Using the command line tool
@@ -52,7 +73,7 @@ For this example, we'll be setting up our repo to use [AngularJS's commit messag
 First, install the Commitizen CLI tools:
 
 ```sh
-npm install commitizen -g
+npm install @ryansonshine/commitizen -g
 ```
 
 Next, initialize your project to use the cz-conventional-changelog adapter by typing:
@@ -108,7 +129,7 @@ Please note that in the previous version of Commitizen we used czConfig. **czCon
 
 Installing and running Commitizen locally allows you to make sure that developers are running the exact same version of Commitizen on every machine.
 
-Install Commitizen with `npm install --save-dev commitizen`.
+Install Commitizen with `npm install --save-dev @ryansonshine/commitizen`.
 
 On **npm 5.2+** you can [use `npx`](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) to initialize the conventional changelog adapter:
 
@@ -186,7 +207,7 @@ It may also make sense to change your `README.md` or `CONTRIBUTING.md` files to 
 Install `commitizen` globally, if you have not already.
 
 ```sh
-npm install -g commitizen
+npm install -g @ryansonshine/commitizen
 ```
 
 Install your preferred `commitizen` adapter globally (for example [`cz-conventional-changelog`](https://www.npmjs.com/package/cz-conventional-changelog)).
