@@ -1,5 +1,5 @@
 {
-  "name": "commitizen",
+  "name": "@ryansonshine/commitizen",
   "version": "0.0.0-semantically-released",
   "description": "Git commit, but play nice with conventions.",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
   "homepage": "https://github.com/commitizen/cz-cli",
   "repository": {
     "type": "git",
-    "url": "https://github.com/commitizen/cz-cli.git"
+    "url": "https://github.com/ryansonshine/cz-cli.git"
   },
   "keywords": [
     "commit",
@@ -38,7 +38,7 @@
     "commitizen"
   ],
   "bugs": {
-    "url": "https://github.com/commitizen/cz-cli/issues"
+    "url": "https://github.com/ryansonshine/cz-cli/issues"
   },
   "bin": {
     "cz": "./bin/git-cz",
@@ -46,6 +46,13 @@
     "commitizen": "./bin/commitizen"
   },
   "author": "Jim Cummins <jimthedev@gmail.com> (https://github.com/jimthedev)",
+  "contributors": [
+    {
+      "name": "Ryan Sonshine",
+      "email": "ryansonshine@users.noreply.github.com",
+      "url": "https://github.com/ryansonshine"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "7.17.6",
@@ -67,26 +74,26 @@
     "nodemon": "2.0.15",
     "nyc": "15.1.0",
     "proxyquire": "2.1.3",
-    "semantic-release": "18.0.1",
+    "semantic-release": "19.0.2",
     "semver": "7.3.7",
     "sinon": "12.0.1",
     "uuid": "8.3.2"
   },
   "dependencies": {
-    "cachedir": "2.3.0",
-    "cz-conventional-changelog": "3.3.0",
-    "dedent": "0.7.0",
-    "detect-indent": "6.1.0",
+    "cachedir": "^2.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dedent": "^0.7.0",
+    "detect-indent": "^6.1.0",
     "find-node-modules": "^2.1.2",
-    "find-root": "1.1.0",
-    "fs-extra": "9.1.0",
-    "glob": "7.2.0",
-    "inquirer": "8.2.2",
+    "find-root": "^1.1.0",
+    "fs-extra": "^9.1.0",
+    "glob": "^7.2.0",
+    "inquirer": "^8.2.2",
     "is-utf8": "^0.2.1",
-    "lodash": "4.17.21",
-    "minimist": "1.2.6",
-    "strip-bom": "4.0.0",
-    "strip-json-comments": "3.1.1"
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.6",
+    "strip-bom": "^4.0.0",
+    "strip-json-comments": "^3.1.1"
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-babel",
