@@ -5,7 +5,7 @@ A fork of [commitzen/cz-cli][0] with dependency versions specified with an `^`.
 Details:
 
 - [commitizen/cz-cli#914][1]
-- [commizizen/cz-cli#897][2]
+- [commitizen/cz-cli#897][2]
 
 This package will continue to be updated in npm with the upstream repository.
 
