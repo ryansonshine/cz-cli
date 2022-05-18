@@ -111,6 +111,12 @@
     "url": "https://opencollective.com/commitizen"
   },
   "release": {
+    "branches": [
+      "main"
+    ],
     "preset": "conventionalcommits"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
