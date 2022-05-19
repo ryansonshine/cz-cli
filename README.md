@@ -9,18 +9,20 @@ can still approve/merge bug fixes.
 This package will continue to be updated in npm with changes from the upstream
 repository.
 
-## Install
+## Migrate/Install
+
+npm
 
 ```sh
-npm uninstall commitizen
-npm install --save-dev @ryansonshine/commitizen
+npm uninstall commitizen cz-conventional-changelog
+npx @ryansonshine/commitizen init @ryansonshine/cz-conventional-changelog --includeCommitizen --force
 ```
 
-If using the default cz-conventional-changelog in your package.json, update with the following:
+yarn
 
 ```sh
-npm uninstall cz-conventional-changelog
-./node_modules/.bin/commitizen init @ryansonshine/cz-conventional-changelog --force # --yarn if using yarn
+npm uninstall commitizen cz-conventional-changelog
+npx @ryansonshine/commitizen init @ryansonshine/cz-conventional-changelog --includeCommitizen --force --yarn
 ```
 
 [0]:https://github.com/commitizen/cz-cli
