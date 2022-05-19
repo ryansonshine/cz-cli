@@ -14,8 +14,7 @@ jobs:
     - name: Checkout target repo
       uses: actions/checkout@v2
       with:
-        ref: main
-        persist-credentials: false
+        ref: upstream
 
     - name: Sync upstream changes
       id: sync
