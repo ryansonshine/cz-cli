@@ -1,0 +1,22 @@
+name: 'Upstream Sync PR'
+
+on:
+  push:
+    branches:
+      - upstream
+
+jobs:
+  sync_pr:
+    runs-on: ubuntu-latest
+    name: Open pull request for latest upstream changes
+
+    steps:
+    - name: Checkout target repo
+      uses: actions/checkout@v2
+
+    - name: Create PR
+      id: cpr
+      uses: peter-evans/create-pull-request@v4
+      with:
+        commit-message: "chore: merge latest upstream changes"
+        branch: upstream
