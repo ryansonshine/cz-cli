@@ -38,7 +38,7 @@
     "commitizen"
   ],
   "bugs": {
-    "url": "https://github.com/ryansonshine/cz-cli/issues"
+    "url": "https://github.com/commitizen/cz-cli/issues"
   },
   "bin": {
     "cz": "./bin/git-cz",
