@@ -26,9 +26,6 @@ jobs:
         upstream_sync_branch: master
         upstream_sync_repo: commitizen/cz-cli
 
-        # Set test_mode true to run tests instead of the true action!!
-        test_mode: true
-
     - name: New commits found
       if: steps.sync.outputs.has_new_commits == 'true'
       run: echo "New commits were found to sync."
