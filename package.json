@@ -114,7 +114,16 @@
     "branches": [
       "main"
     ],
-    "preset": "conventionalcommits"
+    "preset": "conventionalcommits",
+    "presetConfig": {
+      "releaseRules": [
+        {
+          "type": "build",
+          "scope": "deps",
+          "release": "patch"
+        }
+      ]
+    }
   },
   "publishConfig": {
     "access": "public"
