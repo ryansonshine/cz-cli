@@ -16,6 +16,17 @@ npm uninstall commitizen
 npm install --save-dev @ryansonshine/commitizen
 ```
 
+If specifying cz-conventional-changelog in your package.json, update with the following:
+
+```jsonc
+  // ...
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
+    }
+  }
+```
+
 [0]:https://github.com/commitizen/cz-cli
 [1]:https://github.com/commitizen/cz-cli/issues/914
 [2]:https://github.com/commitizen/cz-cli/issues/897

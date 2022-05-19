@@ -89,6 +89,7 @@ function init (repoPath, adapterNpmName, {
     if(includeCommitizen) {
       childProcess.execSync(installCommitizenCommand, { cwd: repoPath });
     }
+    console.log('adapterNpmName: ', adapterNpmName);
     addPathToAdapterConfig(CLI_PATH, repoPath, adapterNpmName);
   } catch (e) {
     console.error(e);

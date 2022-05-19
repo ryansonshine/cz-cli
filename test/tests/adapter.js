@@ -49,12 +49,12 @@ describe('adapter', function () {
 
     // Describe an adapter
     let adapterConfig = {
-      path: path.join(repoConfig.path, '/node_modules/cz-conventional-changelog'),
-      npmName: 'cz-conventional-changelog'
+      path: path.join(repoConfig.path, '/node_modules/@ryansonshine/cz-conventional-changelog'),
+      npmName: '@ryansonshine/cz-conventional-changelog'
     };
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog');
+    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog');
 
     // TEST
     expect(function () { adapter.resolveAdapterPath('IAMANIMPOSSIBLEPATH'); }).to.throw(Error);
@@ -64,7 +64,7 @@ describe('adapter', function () {
     // This line is only here to make sure that cz-conventional-changelog
     // was installed for the purposes of running tests, it is not needed
     // for testing any other adapters.
-    expect(function () { adapter.resolveAdapterPath('cz-conventional-changelog'); }).not.to.throw(Error);
+    expect(function () { adapter.resolveAdapterPath('@ryansonshine/cz-conventional-changelog'); }).not.to.throw(Error);
   });
 
   it('resolves scoped adapter paths', function () {
@@ -90,12 +90,12 @@ describe('adapter', function () {
 
     // Describe an adapter
     let adapterConfig = {
-      path: path.join(repoConfig.path, '/node_modules/@commitizen/cz-conventional-changelog'),
-      npmName: '@commitizen/cz-conventional-changelog'
+      path: path.join(repoConfig.path, '/node_modules/@ryansonshine/cz-conventional-changelog'),
+      npmName: '@ryansonshine/cz-conventional-changelog'
     };
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, '@commitizen/cz-conventional-changelog');
+    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog');
 
     // TEST
     expect(function () { adapter.resolveAdapterPath('IAMANIMPOSSIBLEPATH'); }).to.throw(Error);
@@ -126,12 +126,12 @@ describe('adapter', function () {
 
     // Describe an adapter
     let adapterConfig = {
-      path: path.join(repoConfig.path, '/node_modules/cz-conventional-changelog'),
-      npmName: 'cz-conventional-changelog'
+      path: path.join(repoConfig.path, '/node_modules/@ryansonshine/cz-conventional-changelog'),
+      npmName: '@ryansonshine/cz-conventional-changelog'
     };
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', {includeCommitizen: true});
+    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', {includeCommitizen: true});
 
     // TEST
     expect(function () { adapter.getPrompter('IAMANIMPOSSIBLEPATH'); }).to.throw(Error);

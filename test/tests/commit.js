@@ -147,8 +147,8 @@ ${(os.platform === 'win32') ? '' : '    '}
 
     // Describe an adapter
     let adapterConfig = {
-      path: path.join(repoConfig.path, '/node_modules/cz-conventional-changelog'),
-      npmName: 'cz-conventional-changelog'
+      path: path.join(repoConfig.path, '/node_modules/@ryansonshine/cz-conventional-changelog'),
+      npmName: '@ryansonshine/cz-conventional-changelog'
     };
 
     // Quick setup the repos, adapter, and grab a simple prompter
