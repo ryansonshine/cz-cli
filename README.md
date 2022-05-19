@@ -2,16 +2,17 @@
 
 A fork of [commitzen/cz-cli][0] with dependency versions specified with an `^`.
 
-Details:
+This repository was created out of needing a fix for [commitizen/cz-cli#914][1].
+It appears the maintainers [may no longer have access to publish][2] to npm, but
+can still approve/merge bug fixes.
 
-- [commitizen/cz-cli#914][1]
-- [commitizen/cz-cli#897][2]
-
-This package will continue to be updated in npm with the upstream repository.
+This package will continue to be updated in npm with changes from the upstream
+repository.
 
 ## Install
 
 ```sh
+npm uninstall commitizen
 npm install --save-dev @ryansonshine/commitizen
 ```
 
