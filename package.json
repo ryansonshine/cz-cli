@@ -80,8 +80,8 @@
     "uuid": "8.3.2"
   },
   "dependencies": {
+    "@ryansonshine/cz-conventional-changelog": "^3.3.2",
     "cachedir": "^2.3.0",
-    "cz-conventional-changelog": "^3.3.0",
     "dedent": "^0.7.0",
     "detect-indent": "^6.1.0",
     "find-node-modules": "^2.1.2",
