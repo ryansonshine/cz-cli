@@ -16,15 +16,11 @@ npm uninstall commitizen
 npm install --save-dev @ryansonshine/commitizen
 ```
 
-If specifying cz-conventional-changelog in your package.json, update with the following:
+If using the default cz-conventional-changelog in your package.json, update with the following:
 
-```jsonc
-  // ...
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
-    }
-  }
+```sh
+npm uninstall cz-conventional-changelog
+./node_modules/.bin/commitizen init @ryansonshine/cz-conventional-changelog --force # --yarn if using yarn
 ```
 
 [0]:https://github.com/commitizen/cz-cli
@@ -91,13 +87,13 @@ npm install @ryansonshine/commitizen -g
 Next, initialize your project to use the cz-conventional-changelog adapter by typing:
 
 ```sh
-commitizen init cz-conventional-changelog --save-dev --save-exact
+commitizen init @ryansonshine/cz-conventional-changelog --save-dev
 ```
 
 Or if you are using Yarn:
 
 ```sh
-commitizen init cz-conventional-changelog --yarn --dev --exact
+commitizen init @ryansonshine/cz-conventional-changelog --yarn --dev
 ```
 
 Note that if you want to force install over the top of an old adapter, you can apply the `--force` argument. For more information on this, just run `commitizen help`.
@@ -112,7 +108,7 @@ The above command does three things for you:
 ...
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "./node_modules/@ryansonshine/cz-conventional-changelog"
     }
   }
 ```
@@ -121,7 +117,7 @@ Alternatively, Commitizen configs may be added to a `.czrc` file:
 
 ```json
 {
-  "path": "cz-conventional-changelog"
+  "path": "@ryansonshine/cz-conventional-changelog"
 }
 ```
 
@@ -146,12 +142,12 @@ Install Commitizen with `npm install --save-dev @ryansonshine/commitizen`.
 On **npm 5.2+** you can [use `npx`](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) to initialize the conventional changelog adapter:
 
 ```
-npx commitizen init cz-conventional-changelog --save-dev --save-exact
+npx commitizen init @ryansonshine/cz-conventional-changelog --save-dev
 ```
 
 For **previous versions of npm (< 5.2)** you can execute `./node_modules/.bin/commitizen` or `./node_modules/.bin/cz` in order to actually use the commands.
 
-You can then initialize the conventional changelog adapter using: `./node_modules/.bin/commitizen init cz-conventional-changelog --save-dev --save-exact`
+You can then initialize the conventional changelog adapter using: `./node_modules/.bin/commitizen init @ryansonshine/cz-conventional-changelog --save-dev --save-exact`
 
 And you can then add some nice npm scripts in your `package.json` file pointing to the local version of Commitizen:
 
@@ -222,16 +218,16 @@ Install `commitizen` globally, if you have not already.
 npm install -g @ryansonshine/commitizen
 ```
 
-Install your preferred `commitizen` adapter globally (for example [`cz-conventional-changelog`](https://www.npmjs.com/package/cz-conventional-changelog)).
+Install your preferred `commitizen` adapter globally (for example [`cz-conventional-changelog`](https://www.npmjs.com/package/@ryansonshine/cz-conventional-changelog)).
 
 ```sh
-npm install -g cz-conventional-changelog
+npm install -g @ryansonshine/cz-conventional-changelog
 ```
 
 Create a `.czrc` file in your `home` directory, with `path` referring to the preferred, globally-installed, `commitizen` adapter
 
 ```sh
-echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+echo '{ "path": "@ryansonshine/cz-conventional-changelog" }' > ~/.czrc
 ```
 
 You are all set! Now `cd` into any `git` repository and use `git cz` instead of `git commit`, and you will find the `commitizen` prompt.
@@ -255,13 +251,13 @@ As a project maintainer of many projects, you may want to standardize on a singl
 "use strict";
 
 const path = require('path');
-const bootstrap = require('commitizen/dist/cli/git-cz').bootstrap;
+const bootstrap = require('@ryansonshine/commitizen/dist/cli/git-cz').bootstrap;
 
 bootstrap({
-  cliPath: path.join(__dirname, '../../node_modules/commitizen'),
+  cliPath: path.join(__dirname, '../../node_modules/@ryansonshine/commitizen'),
   // this is new
   config: {
-    "path": "cz-conventional-changelog"
+    "path": "@ryansonshine/cz-conventional-changelog"
   }
 });
 ```
@@ -275,8 +271,8 @@ bootstrap({
   "name": "company-commit",
   "bin": "./my-cli.js",
   "dependencies": {
-    "commitizen": "^2.7.6",
-    "cz-conventional-changelog": "^1.1.5"
+    "@ryansonshine/commitizen": "^4.2.6",
+    "@ryansonshine/cz-conventional-changelog": "^3.3.3"
   }
 }
 ```
@@ -293,7 +289,7 @@ npm install --save-dev company-commit
 
 We know that every project and build process has different requirements, so we've tried to keep Commitizen open for extension. You can do this by choosing from any of the pre-built adapters or even by building your own. Here are some of the great adapters available to you:
 
-- [cz-conventional-changelog](https://www.npmjs.com/package/cz-conventional-changelog)
+- [@ryansonshine/cz-conventional-changelog](https://www.npmjs.com/package/@ryansonshine/cz-conventional-changelog)
 - [cz-conventional-changelog-for-jira](https://www.npmjs.com/package/@digitalroute/cz-conventional-changelog-for-jira)
 - [cz-conventional-changelog-with-jiraid-detection](https://www.npmjs.com/package/cz-conventional-changelog-with-jiraid-detection)
 - [cz-jira-smart-commit](https://www.npmjs.com/package/cz-jira-smart-commit)
