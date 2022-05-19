@@ -71,7 +71,7 @@ function init (repoPath, adapterNpmName, {
   // Generate a string that represents the npm install command
   let installAdapterCommand = yarn ? generateYarnAddAdapterCommand(stringMappings, adapterNpmName) : generateNpmInstallAdapterCommand(stringMappings, adapterNpmName);
 
-  let installCommitizenCommand = yarn ? generateYarnAddAdapterCommand(stringMappings, "commitizen") : generateNpmInstallAdapterCommand(stringMappings, "commitizen");
+  let installCommitizenCommand = yarn ? generateYarnAddAdapterCommand(stringMappings, "@ryansonshine/commitizen") : generateNpmInstallAdapterCommand(stringMappings, "@ryansonshine/commitizen");
 
   // Check for previously installed adapters
   if (adapterConfig && adapterConfig.path && adapterConfig.path.length > 0 && !force) {
@@ -89,7 +89,6 @@ function init (repoPath, adapterNpmName, {
     if(includeCommitizen) {
       childProcess.execSync(installCommitizenCommand, { cwd: repoPath });
     }
-    console.log('adapterNpmName: ', adapterNpmName);
     addPathToAdapterConfig(CLI_PATH, repoPath, adapterNpmName);
   } catch (e) {
     console.error(e);

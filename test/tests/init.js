@@ -162,15 +162,7 @@ describe('init', function () {
 
     // TEST
     expect(packageJson.devDependencies).to.have.property('@ryansonshine/cz-conventional-changelog');
-    expect(packageJson.devDependencies).to.have.property('commitizen');
-    let range = packageJson.devDependencies['@ryansonshine/cz-conventional-changelog'];
-
-    // It should satisfy the requirements of a range
-    expect(semver.validRange(range)).to.not.equal(null);
-
-    // But you CAN increment a single version
-    expect(semver.inc(range, 'major')).not.to.equal(null);
-
+    expect(packageJson.devDependencies).to.have.property('@ryansonshine/commitizen');
   });
 
   it('installs an adapter with --yarn', function () {
