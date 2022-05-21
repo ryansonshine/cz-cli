@@ -21,8 +21,9 @@ npx @ryansonshine/commitizen init @ryansonshine/cz-conventional-changelog --incl
 yarn
 
 ```sh
-npm uninstall commitizen cz-conventional-changelog
-npx @ryansonshine/commitizen init @ryansonshine/cz-conventional-changelog --includeCommitizen --force --yarn
+yarn remove commitizen cz-conventional-changelog
+yarn add @ryansonshine/commitizen
+npx @ryansonshine/commitizen init @ryansonshine/cz-conventional-changelog --force --yarn
 ```
 
 [0]:https://github.com/commitizen/cz-cli
