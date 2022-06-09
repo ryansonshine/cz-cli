@@ -6,7 +6,7 @@ This repository was created out of needing a fix for [commitizen/cz-cli#914][1].
 It appears the maintainers [may no longer have access to publish][2] to npm, but
 can still approve/merge bug fixes.
 
-This package will continue to be updated in npm with changes from the upstream
+[This package][3] will continue to be updated in npm with changes from the upstream
 repository.
 
 ## Migrate/Install
@@ -29,6 +29,7 @@ npx @ryansonshine/commitizen init @ryansonshine/cz-conventional-changelog --forc
 [0]:https://github.com/commitizen/cz-cli
 [1]:https://github.com/commitizen/cz-cli/issues/914
 [2]:https://github.com/commitizen/cz-cli/issues/897
+[3]:https://www.npmjs.com/package/@ryansonshine/commitizen
 
 ## Commitizen for contributors
 
