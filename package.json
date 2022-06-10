@@ -114,18 +114,45 @@
     "branches": [
       "main"
     ],
-    "preset": "conventionalcommits",
-    "presetConfig": {
-      "releaseRules": [
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
         {
-          "type": "build",
-          "scope": "deps",
-          "release": "patch"
+          "preset": "conventionalcommits",
+          "releaseRules": [
+            {
+              "type": "build",
+              "scope": "deps",
+              "release": "patch"
+            }
+          ]
         }
-      ]
-    }
-  },
-  "publishConfig": {
-    "access": "public"
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "conventionalcommits",
+          "presetConfig": {
+            "types": [
+              {
+                "type": "feat",
+                "section": "Features"
+              },
+              {
+                "type": "fix",
+                "section": "Bug Fixes"
+              },
+              {
+                "type": "build",
+                "section": "Dependencies and Other Build Updates",
+                "hidden": false
+              }
+            ]
+          }
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
   }
 }
