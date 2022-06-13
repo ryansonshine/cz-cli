@@ -1,4 +1,4 @@
-# Commitizen CLI Fork without Security Vulnerabilities
+# Commitizen CLI with Security Updates
 
 A fork of [commitzen/cz-cli][0] with dependency versions specified with an `^`.
 
