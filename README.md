@@ -6,8 +6,8 @@ This repository was created out of needing a fix for [commitizen/cz-cli#914][1].
 It appears the maintainers [may no longer have access to publish][2] to npm, but
 can still approve/merge bug fixes.
 
-[This package][3] will continue to be updated in npm with changes from the upstream
-repository.
+[This package][3] is being supported for enterprise use and will continue to be
+updated and published on npm with security updates.
 
 ## Migrate/Install
 
