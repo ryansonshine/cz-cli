@@ -31,13 +31,13 @@ describe('init', function () {
     // SETUP
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog');
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog');
 
     // TEST
 
     // Check resulting json
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
-    expect(packageJson).to.have.nested.property('devDependencies.@ryansonshine/cz-conventional-changelog');
+    expect(packageJson).to.have.nested.property('devDependencies.cz-conventional-changelog');
 
   });
 
@@ -48,13 +48,13 @@ describe('init', function () {
     // SETUP
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { save: true, saveDev: false });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { save: true, saveDev: false });
 
     // TEST
 
     // Check resulting json
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
-    expect(packageJson).to.have.nested.property('dependencies.@ryansonshine/cz-conventional-changelog');
+    expect(packageJson).to.have.nested.property('dependencies.cz-conventional-changelog');
 
   });
 
@@ -65,7 +65,7 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { saveDev: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { saveDev: true });
 
     // TEST
     // Adding a second adapter
@@ -76,7 +76,7 @@ describe('init', function () {
     // Check resulting json
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
     expect(packageJson).not.to.have.nested.property('devDependencies', 'cz-jira-smart-commit');
-    expect(packageJson).to.have.nested.property('config.commitizen.path', './node_modules/@ryansonshine/cz-conventional-changelog');
+    expect(packageJson).to.have.nested.property('config.commitizen.path', './node_modules/cz-conventional-changelog');
     // TODO: Eventually may need to offer both path and package keys. package = npm package name
     // Path for local development
   });
@@ -88,7 +88,7 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { saveDev: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { saveDev: true });
 
     // TEST
 
@@ -110,12 +110,12 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog');
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog');
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
 
     // TEST
-    expect(packageJson.devDependencies).to.have.property('@ryansonshine/cz-conventional-changelog');
-    let range = packageJson.devDependencies['@ryansonshine/cz-conventional-changelog'];
+    expect(packageJson.devDependencies).to.have.property('cz-conventional-changelog');
+    let range = packageJson.devDependencies['cz-conventional-changelog'];
 
     // It should satisfy the requirements of a range
     expect(semver.validRange(range)).to.not.equal(null);
@@ -135,12 +135,12 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { saveExact: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { saveExact: true });
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
 
     // TEST
-    expect(packageJson.devDependencies).to.have.property('@ryansonshine/cz-conventional-changelog');
-    let range = packageJson.devDependencies['@ryansonshine/cz-conventional-changelog'];
+    expect(packageJson.devDependencies).to.have.property('cz-conventional-changelog');
+    let range = packageJson.devDependencies['cz-conventional-changelog'];
 
     // It should satisfy the requirements of a range
     expect(semver.validRange(range)).to.not.equal(null);
@@ -157,12 +157,12 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { includeCommitizen: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { includeCommitizen: true });
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
 
     // TEST
-    expect(packageJson.devDependencies).to.have.property('@ryansonshine/cz-conventional-changelog');
-    expect(packageJson.devDependencies).to.have.property('@ryansonshine/commitizen');
+    expect(packageJson.devDependencies).to.have.property('cz-conventional-changelog');
+    expect(packageJson.devDependencies).to.have.property('commitizen');
   });
 
   it('installs an adapter with --yarn', function () {
@@ -172,13 +172,13 @@ describe('init', function () {
     // SETUP
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { yarn: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { yarn: true });
 
     // TEST
 
     // Check resulting json
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
-    expect(packageJson).to.have.nested.property('dependencies.@ryansonshine/cz-conventional-changelog');
+    expect(packageJson).to.have.nested.property('dependencies.cz-conventional-changelog');
 
   });
 
@@ -189,13 +189,13 @@ describe('init', function () {
     // SETUP
 
     // Install an adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { yarn: true, dev: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { yarn: true, dev: true });
 
     // TEST
 
     // Check resulting json
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
-    expect(packageJson).to.have.nested.property('devDependencies.@ryansonshine/cz-conventional-changelog');
+    expect(packageJson).to.have.nested.property('devDependencies.cz-conventional-changelog');
 
   });
 
@@ -206,7 +206,7 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { yarn: true, dev: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { yarn: true, dev: true });
 
     // TEST
     // Adding a second adapter
@@ -217,7 +217,7 @@ describe('init', function () {
     // Check resulting json
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
     expect(packageJson).not.to.have.nested.property('devDependencies', 'cz-jira-smart-commit');
-    expect(packageJson).to.have.nested.property('config.commitizen.path', './node_modules/@ryansonshine/cz-conventional-changelog');
+    expect(packageJson).to.have.nested.property('config.commitizen.path', './node_modules/cz-conventional-changelog');
     // TODO: Eventually may need to offer both path and package keys. package = npm package name
     // Path for local development
   });
@@ -229,7 +229,7 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { yarn: true, dev: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { yarn: true, dev: true });
 
     // TEST
 
@@ -251,12 +251,12 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { yarn: true, dev: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { yarn: true, dev: true });
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
 
     // TEST
-    expect(packageJson.devDependencies).to.have.property('@ryansonshine/cz-conventional-changelog');
-    let range = packageJson.devDependencies['@ryansonshine/cz-conventional-changelog'];
+    expect(packageJson.devDependencies).to.have.property('cz-conventional-changelog');
+    let range = packageJson.devDependencies['cz-conventional-changelog'];
 
     // It should satisfy the requirements of a range
     expect(semver.validRange(range)).to.not.equal(null);
@@ -276,12 +276,12 @@ describe('init', function () {
     // SETUP
 
     // Add a first adapter
-    commitizenInit(config.paths.endUserRepo, '@ryansonshine/cz-conventional-changelog', { yarn: true, dev: true, exact: true });
+    commitizenInit(config.paths.endUserRepo, 'cz-conventional-changelog', { yarn: true, dev: true, exact: true });
     let packageJson = util.getParsedPackageJsonFromPath(config.paths.endUserRepo);
 
     // TEST
-    expect(packageJson.devDependencies).to.have.property('@ryansonshine/cz-conventional-changelog');
-    let range = packageJson.devDependencies['@ryansonshine/cz-conventional-changelog'];
+    expect(packageJson.devDependencies).to.have.property('cz-conventional-changelog');
+    let range = packageJson.devDependencies['cz-conventional-changelog'];
 
     // It should satisfy the requirements of a range
     expect(semver.validRange(range)).to.not.equal(null);
